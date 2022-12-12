@@ -4,7 +4,9 @@ const menu = [
     'scan1',
     'scan2',
     'scan3',
-    'scan4'
+    'scan4',
+    'scan5',
+    'scan6'
 ];
 
 export default function Head() {
