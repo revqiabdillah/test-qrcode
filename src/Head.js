@@ -6,7 +6,8 @@ const menu = [
     'scan3',
     'scan4',
     'scan5',
-    'scan6'
+    'scan6',
+    'scan7'
 ];
 
 export default function Head() {
@@ -15,7 +16,7 @@ export default function Head() {
         {
             menu.map((item, key) => (
                 <Link className="link" key={key} href={`/${item}`} passHref>
-                    <a className='link' style={{ padding: 10 }}>{item}</a>
+                    <p className='link' style={{ padding: 10 }}>{item}</p>
                 </Link>
             ))
         }

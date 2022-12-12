@@ -3,7 +3,7 @@ import Layout from "../src/Layout";
 import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
 import { consoleApps } from "../src/helpers/console-apps";
 
-export default function Scan3() {
+export default function Scan4() {
   function onScanSuccess(decodedText, decodedResult) {
     // handle the scanned code as you like, for example:
     consoleApps('success', `Code matched = ${decodedText}`, decodedResult);

@@ -1,13 +1,20 @@
 import React from "react";
-import BarcodeScannerComponent from "react-qr-barcode-scanner";
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
 
-function Scan6() {
+// const BarcodeScannerComponent = dynamic(() => import("react-qr-barcode-scanner"), {
+//   ssr: false,
+//   suspense:  true
+// })
+
+const Scan6 = () => {
   const [data, setData] = React.useState("Not Found");
 
   return (
     <>
-      {
+      {/* {
         typeof window !== 'undefined' && (
+          <Suspense fallback={`Loading...`}>
             <BarcodeScannerComponent
                 width={500}
                 height={500}
@@ -16,8 +23,9 @@ function Scan6() {
                 else setData("Not Found");
                 }}
             />
+            </Suspense>
         )
-      }
+      } */}
       <p>{data}</p>
     </>
   );
