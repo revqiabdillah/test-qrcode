@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Layout from "../src/Layout";
 import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
 

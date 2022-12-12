@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Layout from "../src/Layout"
 import { Html5QrcodeScanner } from 'html5-qrcode';
 
