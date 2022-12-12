@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Layout from "../src/Layout";
 import { Html5Qrcode } from "html5-qrcode";
+import { consoleApps } from "../src/helpers/console-apps";
 
 export default function Scan2() {
   function onScanSuccess(decodedText, decodedResult) {
@@ -29,7 +30,7 @@ export default function Scan2() {
           },
           (errorMessage) => {
             html5QrCode.stop();
-            alert(`err: ${errorMessage}`)
+            consoleApps('failed', errorMessage)
             // parse error, ignore it.
           }
         )

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Layout from "../src/Layout";
 import { Html5Qrcode, Html5QrcodeSupportedFormats } from "html5-qrcode";
+import { consoleApps } from "../src/helpers/console-apps";
 
 export default function Scan3() {
   function onScanSuccess(decodedText, decodedResult) {
@@ -10,7 +11,7 @@ export default function Scan3() {
 
   // eslint-disable-next-line no-unused-vars
   function onScanFailure(scanError) {
-    alert(`Error: ${scanError}`);
+    consoleApps('failed', scanError)
   }
 
   useEffect(() => {
@@ -63,14 +64,14 @@ export default function Scan3() {
                         )
                         .then(() => {})
                         .catch((err) => {
-                            console.log('error', err);
+                            consoleApps('failed2', errorMessage)
                             // Start failed, handle it.
                             html5QrCode.stop();
                         });
                     // }
                 })
                 .catch((err) => {
-                    console.log('err', err);
+                    consoleApps('faile3', errorMessage)
                     // handle err
                 });
         }

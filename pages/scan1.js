@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Layout from "../src/Layout"
 import { Html5QrcodeScanner } from 'html5-qrcode';
+import { consoleApps } from "../src/helpers/console-apps";
 
 export default function Scan1() {
     function onScanSuccess(decodedText, decodedResult) {
@@ -10,7 +11,7 @@ export default function Scan1() {
 
     // eslint-disable-next-line no-unused-vars
     function onScanFailure(scanError) {
-        alert(`Error: ${scanError}`)
+        consoleApps('failed1', scanError)
     }
 
     useEffect(() => {
