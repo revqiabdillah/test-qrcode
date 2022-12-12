@@ -12,8 +12,8 @@ export default function Head() {
     <div className="list">
         {
             menu.map((item, key) => (
-                <Link className="link" key={key} href={`/${item}`}>
-                    {item}
+                <Link className="link" key={key} href={`/${item}`} passHref>
+                    <a className='link' style={{ padding: 10 }}>{item}</a>
                 </Link>
             ))
         }

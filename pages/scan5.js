@@ -54,7 +54,7 @@ export default function Scan3() {
                     html5camera.current = html5QrCode;
                     html5QrCode
                         .start(
-                            { facingMode: "environment"},
+                            { facingMode: "user"},
                             {
                                 fps: 10, // Optional, frame per seconds for qr code scanning
                                 qrbox: { width: 300, height: 250 }, // Optional, if you want bounded box UI

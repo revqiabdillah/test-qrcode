@@ -2,11 +2,17 @@ import React from 'react'
 import Head from './Head'
 
 export default function Layout({ children }) {
+  const reload = () => {
+    window.location.reload();
+  }
   return (
     <div className='layout'>
         <div className='header'><Head /></div>
         <div className='main'>
             { children }
+        </div>
+        <div>
+          <button type='button' onClick={reload}>RELOAD</button>
         </div>
 
         <style jsx>

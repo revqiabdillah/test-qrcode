@@ -26,7 +26,7 @@ export default function Scan3() {
           },
           (decodedText, decodedResult) => {
             // do something when code is read
-            alert(`Result: ${decodedText} - ${decodedResult}`)
+            consoleApps('success', `Code matched = ${decodedText}`, decodedResult);
           },
           (errorMessage) => {
             consoleApps('failed', errorMessage)

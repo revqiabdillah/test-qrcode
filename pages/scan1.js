@@ -6,7 +6,7 @@ import { consoleApps } from "../src/helpers/console-apps";
 export default function Scan1() {
     function onScanSuccess(decodedText, decodedResult) {
         // handle the scanned code as you like, for example:
-        alert(`Code matched = ${decodedText}`, decodedResult);
+        consoleApps('success', `Code matched = ${decodedText}`, decodedResult);
     }
 
     // eslint-disable-next-line no-unused-vars
